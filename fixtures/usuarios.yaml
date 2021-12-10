@@ -1,0 +1,5 @@
+- model: app.CustomUser
+  pk: 2
+  fields:
+    email: 'admin@uniq.edu.pe'
+    password: '$2y$10$MJcNlVw19d8uZ4qb.AXOZOODugXYPaXXgKcnoV.TWbvg57VMuuMW6'

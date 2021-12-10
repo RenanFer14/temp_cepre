@@ -1,0 +1,303 @@
+- model: app.ubigeo
+  pk: "080000"
+  fields:
+    nombre: Cusco
+    tipo_ubigeo: D
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+- model: app.ubigeo
+  pk: "080100"
+  fields:
+    nombre: Cusco
+    tipo_ubigeo: P
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+- model: app.ubigeo
+  pk: "080101"
+  fields:
+    nombre: Cusco
+    tipo_ubigeo: T
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+- model: app.ubigeo
+  pk: "080900"
+  fields:
+    nombre: La Convención
+    tipo_ubigeo: P
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+- model: app.ubigeo
+  pk: "080901"
+  fields:
+    nombre: Santa Ana
+    tipo_ubigeo: T
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+- model: app.ubigeo
+  pk: "080902"
+  fields:
+    nombre: Echarati
+    tipo_ubigeo: T
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+
+- model: app.colegio
+  pk: 1
+  fields:
+    ubigeo: '080101'
+    nombre_colegio: 'Ciencias'
+    tipo_colegio: 'PU'
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+- model: app.sede
+  pk: 1
+  fields:
+    codigo_ubigeo: "080101"
+    denominacion_sede: "Sede Central"
+    telefono: "000000"
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+
+- model: app.pabellon
+  pk: 1
+  fields:
+    id_sede: 1
+    denominacion_pabellon: Ciencias
+    numero_pisos: 3
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+
+- model: app.pabellon
+  pk: 2
+  fields:
+    id_sede: 1
+    denominacion_pabellon: Letras
+    numero_pisos: 2
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+
+- model: app.aula
+  pk: 1
+  fields:
+    id_pabellon: 1
+    piso: 1
+    nombre_salon: A-101
+    tipo_aula: E
+    capacidad: 20
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+
+- model: app.aula
+  pk: 2
+  fields:
+    id_pabellon: 1
+    piso: 1
+    nombre_salon: A-102
+    tipo_aula: E
+    capacidad: 20
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+
+- model: app.aula
+  pk: 3
+  fields:
+    id_pabellon: 1
+    piso: 2
+    nombre_salon: A-201
+    tipo_aula: E
+    capacidad: 15
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+
+- model: app.aula
+  pk: 4
+  fields:
+    id_pabellon: 2
+    piso: 1
+    nombre_salon: B-101
+    tipo_aula: E
+    capacidad: 11
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+
+- model: app.aula
+  pk: 5
+  fields:
+    id_pabellon: 2
+    piso: 2
+    nombre_salon: B-201
+    tipo_aula: E
+    capacidad: 20
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+
+
+
+
+- model: app.grupo_academico
+  pk: 1
+  fields:
+    denominacion: Grupo A
+    abreviacion: A
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+
+- model: app.grupo_academico
+  pk: 2
+  fields:
+    denominacion: Grupo B
+    abreviacion: B
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+
+
+- model: app.escuela_profesional
+  pk: 1
+  fields:
+    nombre_escuela_profesional: Ingeniería Civil
+    abreviacion: Civil
+    grupo: 1
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+
+- model: app.escuela_profesional
+  pk: 2
+  fields:
+    nombre_escuela_profesional: Ingeniería de Alimentos
+    abreviacion: Alimentos
+    grupo: 1
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+
+- model: app.escuela_profesional
+  pk: 3
+  fields:
+    nombre_escuela_profesional: Ingeniería Agronómica Tropical
+    abreviacion: Tropical
+    grupo: 1
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+
+- model: app.escuela_profesional
+  pk: 4
+  fields:
+    nombre_escuela_profesional: EcoTurismo
+    abreviacion: Ecoturismo
+    grupo: 2
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+
+- model: app.persona
+  pk: 1
+  fields:
+    dni: 70010101
+    nombres: Jonas
+    apellido_paterno: Leguia
+    apellido_materno: Perez
+    telefono: 978787800
+    direccion: Quillabamba S/N
+    email: jonas.leguia@gmail.com
+    fecha_nacimiento: '2000-08-01'
+    lugar_nacimiento: '080901'
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+
+- model: app.persona
+  pk: 2
+  fields:
+    dni: 70010102
+    nombres: Ken
+    apellido_paterno: Nuñez
+    apellido_materno: Perez
+    telefono: 978787801
+    direccion: Quillabamba 123
+    email: ken.mamani@gmail.com
+    fecha_nacimiento: '2000-10-02'
+    lugar_nacimiento: '080902'
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+
+- model: app.persona
+  pk: 3
+  fields:
+    dni: 70010103
+    nombres: Lourdes
+    apellido_paterno: Guzman
+    apellido_materno: Saenz
+    telefono: 978787802
+    direccion: Quillabamba 447
+    email: lourdes.guzman@hotmail.com
+    fecha_nacimiento: '2002-10-11'
+    lugar_nacimiento: '080902'
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+
+- model: app.persona
+  pk: 4
+  fields:
+    dni: 70010104
+    nombres: Mariana
+    apellido_paterno: Hinojosa
+    apellido_materno: Quispe
+    telefono: 978787803
+    direccion: Quillabamba 555
+    email: mariana.hinojosa@gmail.com
+    fecha_nacimiento: '2001-06-04'
+    lugar_nacimiento: '080902'
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+
+- model: app.persona
+  pk: 5
+  fields:
+    dni: 70010105
+    nombres: Nereida
+    apellido_paterno: Rosales
+    apellido_materno: Luna
+    telefono: 978787803
+    direccion: Jr Vilcabamba 221
+    email: nereida.rosales@gmail.com
+    fecha_nacimiento: '2001-06-04'
+    lugar_nacimiento: '080901'
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+
+- model: app.docente
+  pk: 1
+  fields:
+    id_persona: 1
+    codigo_docente: 111111
+    email_institucional: jonas.leguia@gmail.com
+    categoria: L
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+
+- model: app.docente
+  pk: 2
+  fields:
+    id_persona: 2
+    codigo_docente: 111112
+    email_institucional: ken.mamani@gmail.com
+    categoria: L
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+
+- model: app.ciclo
+  pk: 2
+  fields:
+    denominacion: 'Primer Ciclo 2021'
+    anio: 2021
+    nro_ciclo_de_año: 1
+    fecha_inicio_ciclo: '2021-01-01'
+    fecha_fin_ciclo: '2021-03-31'
+    fecha_inicio_preinscripcion: '2021-01-02'
+    fecha_fin_preinscripcion: '2021-01-05'
+    fecha_inicio_inscripcion: '2021-01-06'
+    fecha_fin_inscripcion: '2021-01-10'
+    numero_examenes: 2
+    numero_maximo_cuotas: 3
+    monto_colegio_privado: 650
+    monto_colegio_publico: 600
+    fecha_registro: '2021-10-01'
+    fecha_actualizacion: '2021-10-01'
+

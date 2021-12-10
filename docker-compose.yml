@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  django:
+    build: ./cepru
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_ROOT_PASSWORD=root
+    container_name: cep-api
+    volumes:
+      - .:/src
+    ports:
+        - 21306:3306
+        - 48000:8000
+
+networks:
+  app-nw:
+    internal: true
+  out-nw:
+    internal: false
+

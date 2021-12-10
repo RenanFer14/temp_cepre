@@ -1,0 +1,4 @@
+- model: app.ubigeo
+  pk: "080000"
+  fields:
+    nombre: "Cusco"

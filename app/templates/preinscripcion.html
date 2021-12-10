@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Resumen Preinscripcion</title>
+</head>
+<style>
+    body {
+        padding: 15px 15px;
+        margin: 2% 18%;
+        border: 2px solid blue;
+        border-radius: 15px;
+    }
+    .header-doc{
+        padding: 20px;
+        text-align: center;
+    }
+    table{
+        text-align: center;        
+    }
+
+</style>
+<body style="padding: 0px 150px;">
+    <div class="header-doc">
+        <h2 style="text-align:center; color:#376970;">CENTRO PREUNIVERSITARIO - UNIQ</h2>
+        <center>
+            <img src="https://uniq.edu.pe/static/media/Logo_uniq.fd2b6b7e.png" alt="uniq logo" width="200" height="200">
+        </center>
+        <h2 style="text-align:center; color:#376970;">COMPROMISO DE PAGO</h2>
+    </div>
+    <br>
+    <h3>
+        Yo <b>{{ nombre_completo }}</b> identificado con <b>DNI: {{ dni }}</b>, postulante a la Carrera Profesional de <b>{{ escuela_profesional }}</b> me comprometo a realizar el pago correspondiente por el concepto de inscripcion al ciclo <b>{{ denominacion_ciclo }}</b>.
+    </h3>
+    <h3>Tipo de Pago: {{ tipo_pago }}</h3>
+    <h3>Nro. de cuotas: {{ cantidad_cuotas }}</h3>
+    <center>
+        <table  style="border-collapse: collapse;
+        width: 100%;" class="table" style="text-align:center;" >
+            <thead>
+                <th>Nro. de cuota</th>
+                <th>Fecha Vencimiento</th>
+                <th>Monto Parcial (S/.)</th>
+                <th>Codigo de Pago</th>
+            </thead>
+            <tbody>
+                {% for cuota in detalle_cuotas %}
+                    <tr style="border-bottom: 1px solid #ddd; text-align:center;">
+                        <td><b>{{ cuota.numero_cuota }}</b></td>
+                        <td><b>{{ cuota.fecha_fin }}</b></td>
+                        <td><b>{{ cuota.monto }}</b></td>
+                        <td><b>{{ cuota.codigo_compromiso_pago }}</b></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </center>
+    <h3 style="color:#376970;">
+        <b>RECUERDA</b>: Debes estar al corriente de tus pagos para evitar inconvenientes.
+        <br>
+        <b>LUGAR DE PAGO</b>: Caja de la UNIQ.
+    </h3>
+</body>
+</html>
